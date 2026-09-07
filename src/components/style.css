@@ -1,0 +1,282 @@
+/* =====================================================
+   FOOTER
+   ===================================================== */
+
+footer {
+  align-items: center;
+  background: var(--forest);
+  color: var(--cream);
+  display: grid;
+  grid-template-columns: 1.2fr 1.5fr 1fr auto;
+  gap: 40px;
+
+  min-height: 100px;
+  padding: 28px clamp(24px, 7vw, 110px);
+
+  box-sizing: border-box;
+}
+
+/* =====================================================
+   BRAND
+   ===================================================== */
+
+footer .brand {
+  align-items: center;
+  color: var(--cream);
+  display: flex;
+  gap: 12px;
+  text-decoration: none;
+  width: fit-content;
+}
+
+footer .brand > span:first-child {
+  align-items: center;
+  border: 1px solid rgba(242, 234, 217, 0.25);
+  border-radius: 50%;
+
+  display: flex;
+  flex-shrink: 0;
+
+  font-family: Fraunces, serif;
+  font-size: 18px;
+
+  height: 32px;
+  justify-content: center;
+  width: 32px;
+}
+
+footer .brand-name {
+  font-family: Fraunces, serif;
+  font-size: 19px;
+  font-weight: 600;
+  line-height: 0.9;
+}
+
+/* =====================================================
+   COPYRIGHT + ADDRESS
+   ===================================================== */
+
+.footer-info {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.footer-info > span:first-child {
+  font-family: "DM Mono", monospace;
+  font-size: 10px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.footer-address {
+  color: rgba(242, 234, 217, 0.62);
+  font-family: "DM Mono", monospace;
+  font-size: 9px;
+  letter-spacing: 0.02em;
+  line-height: 1.5;
+}
+
+/* =====================================================
+   STUDIO
+   ===================================================== */
+
+.footer-studio {
+  font-family: "DM Mono", monospace;
+  font-size: 10px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+/* =====================================================
+   BACK TO TOP
+   ===================================================== */
+
+.back-top {
+  align-items: center;
+  color: var(--cream);
+
+  display: flex;
+  gap: 10px;
+
+  font-family: "DM Mono", monospace;
+  font-size: 10px;
+
+  text-decoration: none;
+  text-transform: uppercase;
+  white-space: nowrap;
+
+  transition:
+    opacity 0.25s ease,
+    transform 0.25s ease;
+}
+
+.back-top:hover {
+  opacity: 0.65;
+  transform: translateY(-2px);
+}
+
+/* =====================================================
+   TABLET
+   769px - 1100px
+   ===================================================== */
+
+@media (max-width: 1100px) {
+  footer {
+    grid-template-columns: 1.1fr 1.4fr 1fr auto;
+    gap: 24px;
+
+    padding-left: 5vw;
+    padding-right: 5vw;
+  }
+
+  footer .brand-name {
+    font-size: 17px;
+  }
+
+  .footer-info > span:first-child,
+  .footer-studio,
+  .back-top {
+    font-size: 9px;
+  }
+
+  .footer-address {
+    font-size: 8px;
+  }
+}
+
+/* =====================================================
+   TABLET KECIL
+   601px - 768px
+   ===================================================== */
+
+@media (max-width: 768px) {
+  footer {
+    grid-template-columns: 1fr 1fr;
+    gap: 28px 30px;
+
+    min-height: auto;
+    padding: 32px 6vw;
+  }
+
+  /* Logo */
+  footer .brand {
+    grid-column: 1 / -1;
+  }
+
+  footer .brand-name {
+    font-size: 19px;
+  }
+
+  /* Copyright + alamat */
+  .footer-info {
+    grid-column: 1;
+  }
+
+  /* Studio */
+  .footer-studio {
+    align-self: end;
+    grid-column: 2;
+    text-align: right;
+  }
+
+  /* Back to top */
+  .back-top {
+    border-top: 1px solid rgba(242, 234, 217, 0.18);
+
+    grid-column: 1 / -1;
+
+    justify-content: space-between;
+
+    padding-top: 18px;
+  }
+}
+
+/* =====================================================
+   HP
+   max 600px
+   ===================================================== */
+
+@media (max-width: 600px) {
+  footer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    gap: 24px;
+
+    padding: 32px 6vw 28px;
+  }
+
+  /* Logo */
+  footer .brand {
+    width: 100%;
+  }
+
+  footer .brand > span:first-child {
+    height: 30px;
+    width: 30px;
+  }
+
+  footer .brand-name {
+    font-size: 18px;
+  }
+
+  /* Copyright */
+  .footer-info {
+    gap: 7px;
+    width: 100%;
+  }
+
+  .footer-info > span:first-child {
+    font-size: 9px;
+  }
+
+  .footer-address {
+    font-size: 8px;
+    line-height: 1.6;
+  }
+
+  /* Studio */
+  .footer-studio {
+    font-size: 9px;
+    width: 100%;
+  }
+
+  /* Back top */
+  .back-top {
+    border-top: 1px solid rgba(242, 234, 217, 0.18);
+
+    justify-content: space-between;
+
+    padding-top: 18px;
+    width: 100%;
+  }
+}
+
+/* =====================================================
+   HP SANGAT KECIL
+   max 380px
+   ===================================================== */
+
+@media (max-width: 380px) {
+  footer {
+    gap: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  footer .brand-name {
+    font-size: 17px;
+  }
+
+  .footer-info > span:first-child,
+  .footer-studio,
+  .back-top {
+    font-size: 8px;
+  }
+
+  .footer-address {
+    font-size: 7.5px;
+  }
+}

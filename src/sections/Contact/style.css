@@ -1,0 +1,16 @@
+.contact { background: var(--terracotta); color: var(--cream); min-height: 650px; text-align: center; }
+.contact-mark { color: var(--mustard); font-size: 42px; margin: 0 0 75px; }
+.contact .eyebrow { color: var(--mustard); }
+.contact h2 { color: var(--cream); font-size: clamp(68px, 9.5vw, 150px); line-height: .8; margin-bottom: 42px; }
+.contact h2 em { color: var(--mustard); font-style: italic; }
+.contact-text { font-size: 15px; }
+.contact-links { display: flex; gap: 15px; justify-content: center; margin-top: 50px; }
+.contact-links a { align-items: center; border-bottom: 1px solid rgba(242,234,217,.6); display: flex; gap: 10px; padding-bottom: 9px; }
+.contact-links a:last-child { border-bottom: 0; }
+.contact-symbol { font-size: 23px; }
+@media (max-width: 760px) {
+  .contact { min-height: 600px; }
+  .contact-mark { margin-bottom: 65px; }
+  .contact-links { align-items: center; flex-direction: column; gap: 22px; }
+  .contact-links a { border-bottom: 0; }
+}

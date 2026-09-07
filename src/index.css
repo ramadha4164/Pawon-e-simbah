@@ -1,0 +1,2 @@
+/* Entry stylesheet for Vite. Keep main.tsx import "./index.css". */
+@import "./styles/globals.css";

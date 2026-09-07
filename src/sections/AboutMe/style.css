@@ -1,0 +1,76 @@
+.about {
+  background: var(--forest);
+  color: var(--cream);
+}
+.about .section-kicker {
+  border-color: rgba(242, 234, 217, 0.35);
+  color: var(--mustard);
+}
+.about-grid {
+  display: grid;
+  gap: 12vw;
+  grid-template-columns: 1fr 1fr;
+  padding-top: 90px;
+}
+.display-small {
+  font:
+    500 clamp(44px, 6vw, 88px)/0.9 Fraunces,
+    serif;
+  letter-spacing: -0.06em;
+}
+.display-small em {
+  color: var(--terracotta);
+  font-style: italic;
+}
+.about-tagline {
+  color: var(--cream);
+  font:
+    italic 300 clamp(18px, 1.7vw, 28px)/0.8 Fraunces,
+    serif;
+  letter-spacing: -0.03em;
+  margin-top: 18px;
+}
+.pattern-mark {
+  color: var(--mustard);
+  font-size: 42px;
+  margin-top: 80px;
+}
+.about-copy {
+  max-width: 470px;
+  padding-top: 24px;
+}
+.lede {
+  font:
+    500 24px/1.35 Fraunces,
+    serif;
+  letter-spacing: -0.03em;
+}
+.about-copy > p:not(.lede) {
+  font-size: 14px;
+  line-height: 1.7;
+  margin-top: 32px;
+}
+.signature {
+  border-top: 1px solid rgba(242, 234, 217, 0.35);
+  font:
+    italic 18px Fraunces,
+    serif;
+  margin-top: 65px;
+  padding-top: 14px;
+}
+.signature span {
+  color: var(--mustard);
+  float: right;
+}
+@media (max-width: 760px) {
+  .about-grid {
+    display: block;
+    padding-top: 55px;
+  }
+  .about-copy {
+    padding-top: 45px;
+  }
+  .pattern-mark {
+    margin-top: 35px;
+  }
+}

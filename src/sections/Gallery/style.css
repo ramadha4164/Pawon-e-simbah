@@ -1,0 +1,141 @@
+.gallery-section {
+  background: var(--cream);
+}
+
+.gallery-grid {
+  display: grid;
+  gap: 20px;
+
+  /* 4 kolom */
+  grid-template-columns: 1.1fr 1fr 0.9fr 1fr;
+
+  /* 2 baris */
+  grid-template-rows: 260px 300px;
+
+  margin-top: 65px;
+}
+
+.gallery-item {
+  background: none;
+  border: 0;
+  cursor: pointer;
+  overflow: hidden;
+  padding: 0;
+  position: relative;
+  text-align: left;
+}
+
+.gallery-item img {
+  filter: saturate(0.78);
+  height: 100%;
+  object-fit: cover;
+  transition:
+    transform 0.6s cubic-bezier(0.2, 0.7, 0.2, 1),
+    filter 0.3s;
+  width: 100%;
+}
+
+.gallery-item:hover img {
+  filter: saturate(1);
+  transform: scale(1.06);
+}
+
+.gallery-item span {
+  align-items: center;
+  background: var(--cream);
+  bottom: 12px;
+  display: flex;
+  font:
+    10px "DM Mono",
+    monospace;
+  gap: 12px;
+  left: 12px;
+  padding: 9px 11px;
+  position: absolute;
+  text-transform: uppercase;
+}
+
+/* =========================
+   POSISI GALLERY
+   ========================= */
+
+/* 01 — Brongkos Daging */
+.gallery-tall {
+  grid-column: 1;
+  grid-row: 1 / span 2;
+}
+
+/* 02 — Dapur Simbah */
+.gallery-wide {
+  grid-column: 2 / span 2;
+  grid-row: 1;
+}
+
+/* 03 — Menu Rumah */
+.gallery-item:nth-child(3) {
+  grid-column: 4;
+  grid-row: 1;
+}
+
+/* 04 — Ayam Pedas */
+.gallery-item:nth-child(4) {
+  grid-column: 2;
+  grid-row: 2;
+}
+
+/* 05 — Soto Ayam */
+.gallery-item:nth-child(5) {
+  grid-column: 3;
+  grid-row: 2;
+}
+
+/* 06 — Sayur Lodeh */
+.gallery-item:nth-child(6) {
+  grid-column: 4;
+  grid-row: 2;
+}
+@media (max-width: 760px) {
+  .gallery-grid {
+    display: grid;
+    gap: 12px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 260px 190px 210px 210px;
+    margin-top: 45px;
+  }
+
+  .gallery-tall {
+    grid-column: 1;
+    grid-row: 1 / span 2;
+  }
+
+  .gallery-wide {
+    grid-column: 2;
+    grid-row: 1;
+  }
+
+  .gallery-item:nth-child(3) {
+    grid-column: 2;
+    grid-row: 2;
+  }
+
+  .gallery-item:nth-child(4) {
+    grid-column: 1 / span 2;
+    grid-row: 3;
+  }
+
+  .gallery-item:nth-child(5) {
+    grid-column: 1;
+    grid-row: 4;
+  }
+
+  .gallery-item:nth-child(6) {
+    grid-column: 2;
+    grid-row: 4;
+  }
+
+  .gallery-item span {
+    font-size: 8px;
+    left: 7px;
+    padding: 7px;
+  }
+}
