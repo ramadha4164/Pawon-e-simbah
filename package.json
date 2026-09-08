@@ -1,17 +1,17 @@
 {
   "name": "vite-react-typescript-starter",
   "private": true,
-  "homepage": "https://ramadha4164.github.io/Pawon-e-simbah",
+  "homepage": "https://ramadha4164.github.io/Pawon'e simbah",
   "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist",
     "lint": "eslint .",
     "preview": "vite preview",
-    "typecheck": "tsc --noEmit -p tsconfig.app.json",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist"
+    "typecheck": "tsc --noEmit -p tsconfig.app.json"
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.57.4",
